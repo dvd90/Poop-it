@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :toilets do
     resources :bookings, only: [:show, :create]
   end
+  get "dashboard", to: "toilets#dashboard", as: :dashboard
 end
