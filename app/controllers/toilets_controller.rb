@@ -1,7 +1,7 @@
 class ToiletsController < ApplicationController
     before_action :set_toilet, only: [:show, :edit, :update, :destroy]
   def index         # GET
-    @toilets = Toilet.all
+    @toilets = policy_scope(Toilet)
   end
 
   def dashboard
