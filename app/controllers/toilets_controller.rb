@@ -8,7 +8,11 @@ class ToiletsController < ApplicationController
     render "#{current_user.class.to_s.downcase}_dashboard"
   end
 
-  def show          # GET
+  def show
+    @toilet = Toilet.find(params[:id])
+    authorize @toilet
+    @booking = Booking.new
+    @booking.toilet = @toilet
   end
 
   def new           # GET

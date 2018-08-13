@@ -12,7 +12,9 @@
   <body>
     <%= render "layouts/navbar" unless @naked %>
 
-      <%= yield %>
+      <div class="body-content" style="min-height: 80vh";>
+        <%= yield %>
+      </div>
 
     <%= render "layouts/footer" unless @naked %>
     <%= javascript_include_tag 'application' %>
