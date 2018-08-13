@@ -7,4 +7,10 @@ class ToiletPolicy < ApplicationPolicy
   def show?
     true
   end
+  def new?
+    user.owner?
+  end
+  def create?
+    true
+  end
 end

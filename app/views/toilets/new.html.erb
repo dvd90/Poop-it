@@ -1,0 +1,15 @@
+<div class="new-toilet-container">
+  <h1>Create your toilet spot</h1>
+    <div class="form-toilet">
+        <%= simple_form_for(@toilet) do |f| %>
+
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :location %>
+          <%= f.input :price %>
+          <%= f.input :picture %>
+          <%= f.input :picture_cache, as: :hidden %>
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+    </div>
+  </div>

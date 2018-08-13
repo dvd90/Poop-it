@@ -1,4 +1,5 @@
 <% if policy(Toilet).show? %>
 <h1><%= @toilet.title %></h1>
+<%= cl_image_tag @toilet.picture, height: 300, width: 400, crop: :fill %>
 <%= link_to "Go now!", toilet_bookings_path(@toilet), method: :post %>
 <% end %>

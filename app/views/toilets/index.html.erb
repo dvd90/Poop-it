@@ -9,12 +9,15 @@
   <div class="row">
       <% @toilets.each do |toilet| %>
       <div class="col-xs-12 col-sm-4">
-       <div class="card" >
-        <div class="card-description">
-          <p><%= link_to toilet.title, toilet_path(toilet) %></p>
+        <%= link_to toilet_path(toilet) do %>
+         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+           url('<%= cl_image_path toilet.picture %>')">
+          <div class="card-description">
+            <p><%=toilet.title %></p>
+          </div>
         </div>
       </div>
-    </div>
+      <% end %>
       <% end %>
   </div>
 </div>

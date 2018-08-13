@@ -1,6 +1,6 @@
 class Owner < User
-  has_many :bookings
-  has_many :toilets, through: :bookings
+  has_many :bookings, dependent: :destroy
+  has_many :toilets, through: :bookings, dependent: :destroy
   #validates :picture, presence: true
 
   def owner?

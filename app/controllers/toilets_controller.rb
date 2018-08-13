@@ -15,15 +15,20 @@ class ToiletsController < ApplicationController
     @booking.toilet = @toilet
   end
 
-  def new           # GET
+  def new
     @toilet = Toilet.new
+    authorize @toilet
   end
 
   def create        # POST
     @toilet = Toilet.new(toilet_params)
+    authorize @toilet
+    @toilet.owner = current_user
     if @toilet.save
-      redirect_to dashboard_path
+      redirect_to toilet_path(@toilet)
+
     else
+      raise
       render :new
     end
   end
