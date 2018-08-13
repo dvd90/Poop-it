@@ -1,16 +1,15 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);">
+<div class="banner-index" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);">
   <div class="banner-content">
     <h1>Poop-It</h1>
     <p>Poop on the go</p>
-    <a class="btn btn-primary btn-lg">Find toilets around</a>
   </div>
 </div>
-<div class="container">
+<br />
+<div class="container-index">
   <div class="row">
       <% @toilets.each do |toilet| %>
       <div class="col-xs-12 col-sm-4">
        <div class="card" >
-        <div class="card-category"></div>
         <div class="card-description">
           <p><%= link_to toilet.title, toilet_path(toilet) %></p>
         </div>
