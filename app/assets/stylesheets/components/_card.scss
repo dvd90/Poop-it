@@ -3,8 +3,10 @@
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
+  background-color: #474747;
   color: white;
   position: relative;
+  margin-bottom: 30px;
 }
 .card-user {
   position: absolute;
@@ -27,6 +29,9 @@
 }
 .card-description h2 {
   font-size: 24px;
+}
+.card-description a {
+  color: #D7CDCC;
 }
 .card-description p {
   font-size: 14px;
