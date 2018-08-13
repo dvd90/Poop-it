@@ -1,14 +1,18 @@
 class ToiletsController < ApplicationController
     before_action :set_toilet, only: [:show, :edit, :update, :destroy]
   def index         # GET
-    @toilets = Toilet.all
+    @toilets = policy_scope(Toilet)
   end
 
   def dashboard
     render "#{current_user.class.to_s.downcase}_dashboard"
   end
 
-  def show          # GET
+  def show
+    @toilet = Toilet.find(params[:id])
+    authorize @toilet
+    @booking = Booking.new
+    @booking.toilet = @toilet
   end
 
   def new           # GET

@@ -1,0 +1,4 @@
+<% if policy(Toilet).show? %>
+<h1><%= @toilet.title %></h1>
+<%= link_to "Go now!", toilet_bookings_path(@toilet), method: :post %>
+<% end %>
