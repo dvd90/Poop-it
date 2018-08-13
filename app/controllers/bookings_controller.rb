@@ -1,17 +1,19 @@
 class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
+    authorize @booking
     @booking.toilet = Toilet.find(params[:toilet_id])
     @booking.renter = current_user
     @booking.owner = @booking.toilet.owner
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to toilet_booking_path(@booking.toilet, @booking)
     else
-      render :new
+      render :show
     end
   end
 

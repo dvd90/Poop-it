@@ -15,7 +15,7 @@ class ApplicationPolicy
   end
 
   def create?
-    false
+   false
   end
 
   def new?

@@ -3,5 +3,12 @@ class BookingPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+
+  end
+  def create?
+    user.renter?
+  end
+  def show?
+    true
   end
 end
