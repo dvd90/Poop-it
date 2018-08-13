@@ -5,5 +5,5 @@ class Toilet < ApplicationRecord
   validates :description, presence: true
   validates :location, presence: true
   validates :price, presence: true
-  mount_uploader :picture, PhotoUploader
+  # mount_uploader :picture, PhotoUploader
 end
