@@ -3,6 +3,12 @@ class ToiletsController < ApplicationController
     before_action :set_toilet, only: [:show, :edit, :update, :destroy]
   def index         # GET
     @toilets = policy_scope(Toilet)
+    @markers = @toilets.map do |toilet|
+      {
+        lat: toilet.latitude,
+        lng: toilet.longitude
+      }
+    end
   end
 
   def dashboard

@@ -1,14 +1,15 @@
 class ToiletPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.all.where.not(latitude: nil, longitude: nil)
     end
+
   end
   def show?
     true
   end
   def new?
-    user.owner? 
+    user.owner?
   end
   def create?
     true
