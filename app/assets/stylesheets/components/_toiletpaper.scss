@@ -1,0 +1,126 @@
+
+$speed:1s;
+
+.circle{
+  position:relative;
+  top:20px;
+  width:300px;
+  height:300px;
+  border:solid;
+  border-radius:200px;
+  background-color:#444;
+  border-color:#444;
+  margin:0 auto;
+  margin-bottom: 50px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.roll{
+  position:relative;
+  top:80px;
+  left:30px;
+  width:250px;
+  height:150px;
+  background-color:#EEE;
+  border-radius:200px;
+  -webkit-transition: all $speed ease;
+  transition: all $speed ease;
+  transform: scale(0.8,1);
+  cursor: pointer;
+}
+
+.roll:hover .paperHang{
+  height:200px;
+}
+.roll:active .paperHang{
+  height:220px;
+}
+.roll:hover .paperHang .sheet{
+  top:-20px;
+}
+
+.roll:active .paperHang .sheet:nth-child(3){
+  margin-top:20px;
+}
+
+.roll:hover .sheetHolder .sheet{
+  top:-20px;
+}
+
+.paper{
+  position:absolute;
+  width:150px;
+  height:150px;
+  background-color:#DDD;
+  border-radius:200px;
+  overflow:hidden;
+  z-index:20;
+
+
+}
+.tube{
+  width:55px;
+  height:55px;
+  background-color:#AA9B83;
+  border-radius:200px;
+  top:47.5px;
+  left:47.5px;
+  position:absolute;
+  border:solid;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-color:#686154;
+  border-width:thin;
+  background: -webkit-linear-gradient(#614C2A,#A79A82);
+  background: -o-linear-gradient(#614C2A,#A79A82);
+  background: -moz-linear-gradient(#614C2A,#A79A82);
+  background: linear-gradient(#614C2A,#A79A82);
+}
+.paperHang{
+  width:100px;
+  height:50px;
+  top:75px;
+  left:150px;
+  position:absolute;
+  overflow:hidden;
+   -webkit-transition: all $speed ease;
+  transition: all $speed ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+}
+
+.sheet{
+  margin-top:0px;
+  top:-175px;
+  width:600px;
+  height:75px;
+  background-color:#EEE;
+  position:relative;
+  -webkit-transition: all $speed ease;
+  transition: all $speed ease;
+  border:dashed;
+  border-color:#999;
+  border-width:thin;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-left:0;
+  border-right:0;
+  border-bottom:0;
+}
+.sheetHolder{
+  position:absolute;
+  top:0px;
+  left:20px;
+  width:255px;
+  height:150px;
+  border-radius:200px;
+  overflow:hidden;
+  -webkit-transition: all $speed ease;
+  transition: all $speed ease;
+  transform: scale(0.8,1);
+  cursor: pointer;
+}
+.sheetHolder .sheet{
+ top:-175px;
+}
