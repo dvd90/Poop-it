@@ -11,4 +11,13 @@ class BookingPolicy < ApplicationPolicy
   def show?
     true
   end
+  def dashboard?
+    true
+  end
+  def edit?
+    user.renter?
+  end
+  def update?
+    user.renter?
+  end
 end
