@@ -1,25 +1,4 @@
-// Specific CSS for your home-page
-*,*:after, *:before{
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-html {
-  font-family: "Lato", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/*body {
-  max-width: 1000px;
-  margin: 3em auto 3em auto;
-  width: 90%;
-
-  background: #fff;
-}*/
 
 .clearfix:before,
 .clearfix:after {
@@ -33,7 +12,7 @@ html {
   *zoom: 1;
 }
 
-h1 {
+.banner-content h1 {
   text-align: center;
   letter-spacing: 1px;
 }
@@ -44,14 +23,6 @@ h1 {
   margin-bottom: 4em;
 }
 
-a {
-  text-decoration: none;
-  color: #1abc9c;
-  border-bottom: 1px solid #eee;
-}
-a:hover {
-  border-bottom-color: #1abc9c;
-}
 
 /* Testimonal Styles Goes Here */
 .testimonal-wrap {
