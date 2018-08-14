@@ -8,7 +8,7 @@ class ToiletPolicy < ApplicationPolicy
     true
   end
   def new?
-    user.owner?
+    user.owner? 
   end
   def create?
     true
