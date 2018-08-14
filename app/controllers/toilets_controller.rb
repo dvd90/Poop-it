@@ -8,8 +8,10 @@ class ToiletsController < ApplicationController
   def dashboard
     @user = current_user
     authorize @user
+    @bookings = @user.bookings
     @toilets = @user.toilets
     render "#{current_user.class.to_s.downcase}_dashboard"
+    authorize @bookings
     authorize @toilets
   end
 
@@ -30,10 +32,8 @@ class ToiletsController < ApplicationController
     authorize @toilet
     @toilet.owner = current_user
     if @toilet.save
-      redirect_to toilet_path(@toilet)
-
+      redirect_to dashboard_path
     else
-      raise
       render :new
     end
   end

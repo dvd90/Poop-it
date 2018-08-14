@@ -1,7 +1,7 @@
 <div class="new-toilet-container">
   <h1>Add a review</h1>
     <div class="form-toilet">
-        <%= simple_form_for(@booking) do |f| %>
+        <%= simple_form_for [@booking.toilet, @booking] do |f| %>
 
           <%= f.input :review %>
           <%= f.input :rating, collection: 0..5%>

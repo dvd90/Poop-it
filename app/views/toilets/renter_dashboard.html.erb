@@ -1,5 +1,11 @@
 <h1>Renter Dashboard</h1>
-<% @toilets.each do |toilet| %>
-  <p><%= toilet.title %></p>
-  <p><%= cl_image_tag toilet.picture, height: 50, width: 50, crop: :fill %>  <%= link_to "Write a review", '#'  %></p>
+<% @bookings.each do |booking| %>
+  <p><%= booking.toilet.title %></p>
+  <p><%= cl_image_tag booking.toilet.picture, height: 50, width: 50, crop: :fill %>
+    <% if booking.review %>
+      <%= booking.review %>  <%= booking.rating %>
+    <% else %>
+      <%= link_to "Write a review", edit_toilet_booking_path(booking.toilet, booking)%>
+    <% end %>
+    </p>
 <% end %>

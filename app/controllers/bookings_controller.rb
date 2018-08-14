@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
     @booking = Booking.new
     authorize @booking
     @booking.toilet = Toilet.find(params[:toilet_id])
@@ -20,9 +19,12 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def update
+    @booking = Booking.find(params[:id])
+    authorize @booking
     if @booking.update(booking_params)
       redirect_to dashboard_path
     else
@@ -33,6 +35,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:bookings).permit(:review, :rating)
+    params.require(:booking).permit(:review, :rating)
   end
 end
