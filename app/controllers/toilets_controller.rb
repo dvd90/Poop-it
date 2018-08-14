@@ -33,7 +33,6 @@ class ToiletsController < ApplicationController
       redirect_to toilet_path(@toilet)
 
     else
-      raise
       render :new
     end
   end

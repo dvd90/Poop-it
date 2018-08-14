@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
     @booking = Booking.new
     authorize @booking
     @booking.toilet = Toilet.find(params[:toilet_id])
