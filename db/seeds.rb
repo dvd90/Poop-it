@@ -1,7 +1,5 @@
 require 'faker'
-Owner.destroy_all
-Toilet.destroy_all
-Renter.destroy_all
+
 
 renter = Renter.new(email: 'lorene@gmail.com', password: 'tkontoi', password_confirmation: 'tkontoi')
 renter.save!
