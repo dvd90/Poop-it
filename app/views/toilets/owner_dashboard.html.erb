@@ -1,11 +1,15 @@
-<h1>Owner Dashboard</h1>
-<% @toilets.each do |toilet| %>
-  <p><%= toilet.title %></p>
-  <p><%= cl_image_tag toilet.picture, height: 50, width: 50, crop: :fill %>  </p>
-  <h3>Reviews</h3>
-  <ul>
-    <% toilet.bookings.each do |booking| %>
-      <li><%= booking.review %>  <%= booking.rating %></li>
+<div class="wrapper-dashboard">
+  <div class="container-dashboard">
+    <h1>Owner Dashboard</h1>
+    <% @toilets.each do |toilet| %>
+      <p><%= toilet.title %></p>
+      <p><%= cl_image_tag toilet.picture, height: 50, width: 50, crop: :fill %>  </p>
+      <h3>Reviews</h3>
+      <ul>
+        <% toilet.bookings.each do |booking| %>
+          <li><%= booking.review %>  <%= booking.rating %></li>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
-<% end %>
+  </div>
+</div>

@@ -1,11 +1,22 @@
-<h1>Renter Dashboard</h1>
-<% @bookings.each do |booking| %>
-  <p><%= booking.toilet.title %></p>
-  <p><%= cl_image_tag booking.toilet.picture, height: 50, width: 50, crop: :fill %>
-    <% if booking.review %>
-      <%= booking.review %>  <%= booking.rating %>
-    <% else %>
-      <%= link_to "Write a review", edit_toilet_booking_path(booking.toilet, booking)%>
+<div class="wrapper-dashboard">
+  <div class="container-dashboard">
+    <h1>Renter Dashboard</h1>
+    <% @bookings.each do |booking| %>
+      <div class="flex-dashboard">
+        <div class="toilet-details">
+          <p><%= booking.toilet.title %></p>
+          <p><%= cl_image_tag booking.toilet.picture, height: 80, width: 80, crop: :fill %></p>
+        </div>
+        <div class="renter-reviews">
+          <% if booking.review %>
+            <p>Review</p>
+            <p> <%= booking.review %> , rating:  <%= booking.rating %></p>
+          <% else %>
+            <p>Review</p>
+            <%= link_to "Write a review", edit_toilet_booking_path(booking.toilet, booking)%>
+          <% end %>
+        </div>
+      </div>
     <% end %>
-    </p>
-<% end %>
+  </div>
+</div>
