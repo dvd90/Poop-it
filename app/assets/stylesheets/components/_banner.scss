@@ -12,6 +12,7 @@
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  font-family:$headers-font;
 }
 .banner p {
   font-size: 25px;
@@ -19,4 +20,16 @@
   color: rgb(255, 255, 255);
   opacity: 0.6;
   margin-bottom: 30px;
+}
+
+.hero-banner-btn a {
+  border-radius: 25px;
+}
+
+.find a {
+  width: 136px;
+}
+
+.seater a {
+  height: 39.6px;
 }
