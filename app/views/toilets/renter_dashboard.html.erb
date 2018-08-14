@@ -1,1 +1,5 @@
 <h1>Renter Dashboard</h1>
+<% @toilets.each do |toilet| %>
+  <p><%= toilet.title %></p>
+  <p><%= cl_image_tag toilet.picture, height: 50, width: 50, crop: :fill %>  <%= link_to "Write a review", '#'  %></p>
+<% end %>

@@ -8,7 +8,9 @@ class ToiletsController < ApplicationController
   def dashboard
     @user = current_user
     authorize @user
+    @toilets = @user.toilets
     render "#{current_user.class.to_s.downcase}_dashboard"
+    authorize @toilets
   end
 
   def show
