@@ -1,10 +1,121 @@
 // Specific CSS for your home-page
+*,*:after, *:before{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+html {
+  font-family: "Lato", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-.container {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/*body {
+  max-width: 1000px;
+  margin: 3em auto 3em auto;
+  width: 90%;
 
+  background: #fff;
+}*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.meta {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+a {
+  text-decoration: none;
+  color: #1abc9c;
+  border-bottom: 1px solid #eee;
+}
+a:hover {
+  border-bottom-color: #1abc9c;
+}
+
+/* Testimonal Styles Goes Here */
+.testimonal-wrap {
+  width: 100%;
+  float: left;
+  margin-top: 45px;
+  margin-bottom: 3.5em;
+
+  text-align: center;
+  position: relative;
+  //background: #ecf0f1;
+  padding-top: 3em;
+  padding-left: 1.5em;
+  padding-bottom: 2.5em;
+  padding-right: 1.5em;
+  /*border-radius: 3px;*/
+  box-shadow: 0 1px 0 #bdc3c7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.testimonal-wrap:before {
+  content: "\201D";
+  display: block;
+  font-size: 5em;
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  line-height: 1em;
+  color: #1abc9c;
+}
+.testimonal-wrap img {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  border-radius: 50%;
+  max-width: 100%;
+  box-shadow: 0 0 0 4px #bdc3c7;
+}
+.testimonal-content {
+  font-size: 1.120em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #34495e;
+  margin-bottom: 1em;
+}
+.testimonal-author {
+  font-size: 1em;
+  font-weight: 700;
+  font-weight: bolder;
+  color: #1abc9c;
+  text-transform: uppercase;
+}
+
+/* if screen greater than 768px */
+@media(min-width: 768px) {
+  .testimonal-wrap {
+    width: 33.333%;
+    margin-bottom: 0;
+    border-right: 1px solid #ddd;
+  }
+  .testimonal-wrap:last-child {
+    border-right: 0;
+  }
 }
