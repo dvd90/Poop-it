@@ -6,6 +6,8 @@ class ToiletsController < ApplicationController
   end
 
   def dashboard
+    @user = current_user
+    authorize @user
     render "#{current_user.class.to_s.downcase}_dashboard"
   end
 
