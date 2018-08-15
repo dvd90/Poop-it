@@ -23,14 +23,14 @@
                   <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
             <% end %>
         <% end %>
-        <div class="dropdown">
+
         <% if current_user.class.to_s.downcase == "owner" %>
          <%= link_to "Add a toilet", new_toilet_path, class: "navbar-wagon-item navbar-wagon-link" %>
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
               <% end %>
         <% end %>
-        </div>
+
       </div>
 
     <% else %>
