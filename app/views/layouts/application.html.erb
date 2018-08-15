@@ -18,8 +18,8 @@
 
     <%= render "layouts/footer" unless @naked %>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['AIzaSyCuE6mzge5toZRQktsKf8Q_R6BTfK-lq8I']}" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_BROWSER_POOPIT']}" %>
     <%= javascript_pack_tag 'application' %>
-    <%= javascript_pack_tag "map" %>
+    <%= javascript_pack_tag 'map' %>
   </body>
 </html>
