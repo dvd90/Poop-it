@@ -17,4 +17,10 @@ class ToiletPolicy < ApplicationPolicy
   def dashboard?
     true
   end
+  def edit?
+    user.owner?
+  end
+  def update?
+    user.owner?
+  end
 end
