@@ -1,19 +1,20 @@
-<div class="grid-wrapper">
-    <div class="grid-container">
+<div class="toilet-wrapper">
+  <div class="toilet-container">
+    <div class="container-flex">
       <div class="card toilet-pic" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path @toilet.picture %>')">
-        <p><%= @toilet.title %></p>
-        <p><strong><%= @toilet.price %>nis</strong></p>
+          <p><%= @toilet.title %></p>
+          <p><strong><%= @toilet.price %>nis</strong></p>
       </div>
-      <div class="go-btn">
-        <%= link_to "Go now!", toilet_bookings_path(@toilet), method: :post %>
-      </div>
-      <div class="grid-description">
-        <p><strong>Description: </strong><%= @toilet.description %></p>
-        <p><strong>Location: </strong><%= @toilet.location %></p>
+      <div class="go-link">
+        <%= link_to "Go now!", toilet_bookings_path(@toilet), method: :post, class: "go-btn" if current_user.renter? %>
       </div>
     </div>
-    <div class="back-btn">
-      <%= link_to "Back to search", toilets_path %>
+    <div class="grid-description">
+      <p><strong>Description: </strong><%= @toilet.description %></p>
+      <p><strong>Location: </strong><%= @toilet.location %></p>
+    </div>
+    <div class="back-search">
+      <%= link_to "Back to search", toilets_path, class: "back-btn" %>
     </div>
   </div>
 </div>

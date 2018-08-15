@@ -1,25 +1,72 @@
-.grid-wrapper {
+.toilet-wrapper {
   display: flex;
   justify-content: space-around;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: 300px 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 20vh;
+.toilet-container {
+  width: 60vw;
 }
-.toilet-pic {
-  grid-row: 1 / span 3;
-  grid-column: 1 / span 1;
-  background-color: white;
-}
+
 .grid-description {
-  grid-row: 4 / span 1;
-  grid-column: 1 / span 4;
   background-color: white;
   padding: 20px;
+  border-radius: 5px;
+  border-shadow: 5px 5px rgba(211,211,211,0.6);
+}
+.toilet-pic {
+  margin-left: 0;
+  width: 350px;
+  height: 250px;
+  border-radius: 5px;
+}
+.toilet-pic p {
+  margin-left: 10px;
 }
 .go-btn {
-  grid-row: 2 / span 1;
-  grid-column: 3 / span 1;
-  background-color: white;
+  background-color: rgba(173, 52, 62, 0.8);
+  border-radius: 10px;
+}
+.go-btn:hover {
+  background-color: rgba(173, 52, 62, 1);
+}
+.back-btn {
+  background-color: rgba(173, 52, 62, 0.8);
+  border-radius: 10px;
+}
+.back-btn:hover {
+  background-color: rgba(173, 52, 62, 1);
+}
+a.go-btn {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+a.go-btn:hover {
+  text-decoration: none;
+}
+a.back-btn {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+a.back-btn:hover {
+  text-decoration: none;
+}
+.back-search {
+  margin-top: 20px;
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.go-link {
+  align-items: center;
+  margin: auto;
+  text-align: center;
 }
