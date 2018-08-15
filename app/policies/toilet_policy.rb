@@ -1,7 +1,7 @@
 class ToiletPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all.where.not(latitude: nil, longitude: nil)
+      scope.where.not(latitude: nil, longitude: nil).all
     end
 
   end

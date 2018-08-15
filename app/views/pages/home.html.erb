@@ -3,6 +3,7 @@
       <h1>Poop it</h1>
     <div class="hero-banner-btn">
       <div class="circle">
+        <%= link_to "#", id: "geolocate" do %>
         <div class="roll">
           <div class="sheetHolder">
             <div class="sheet"></div>
@@ -23,7 +24,8 @@
           </div>
         </div>
       </div>
-        <%= link_to "Discover", toilets_path, class:"btn btn-primary" %>  <%= link_to "Login as a host", dashboard_path, class:"btn btn-primary" %>
+      <% end %>
+      <%= link_to "Login as a host", dashboard_path, class:"btn btn-primary", id:"host-btn" %>
     </div>
   </div>
 </div>
