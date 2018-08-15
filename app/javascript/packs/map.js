@@ -184,10 +184,10 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     map.setZoom(2);
   } else if (markers.length === 1) {
     map.setCenter(markers[0].lat, markers[0].lng);
-    map.setZoom(17);
+    map.setZoom(16);
   } else {
     map.setCenter(markers[0].lat, markers[0].lng);
-    map.setZoom(17);
+    map.setZoom(16);
     // map.fitLatLngBounds(markers);
   }
 
@@ -202,7 +202,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
       origin: [markers[0].lat, markers[0].lng],
       destination: [markers[1].lat, markers[1].lng],
       travelMode: 'walking'
-    });
+    })
   }
 }
 
