@@ -44,10 +44,14 @@ class ToiletsController < ApplicationController
     end
   end
 
-  def edit          # GET
+  def edit
+    @toilet = Toilet.find(params[:id])
+    authorize @toilet
   end
 
-  def update        # PATCH
+  def update
+    @toilet = Toilet.find(params[:id])
+    authorize @toilet
     if @toilet.update(toilet_params)
       redirect_to dashboard_path
     else

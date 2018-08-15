@@ -2,7 +2,7 @@
   <div class="container-dashboard">
     <h1>Owner Dashboard</h1>
     <% @toilets.each do |toilet| %>
-      <p><%= toilet.title %></p>
+      <p><%= toilet.title %>   <%= link_to "update", edit_toilet_path(toilet) %></p>
       <p><%= cl_image_tag toilet.picture, height: 50, width: 50, crop: :fill %>  </p>
       <h3>Reviews</h3>
       <ul>
