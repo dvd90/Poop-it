@@ -2,14 +2,28 @@
   <div class="container-dashboard">
     <h1>Owner Dashboard</h1>
     <% @toilets.each do |toilet| %>
-      <p><%= toilet.title %></p>
-      <p><%= cl_image_tag toilet.picture, height: 50, width: 50, crop: :fill %>  </p>
-      <h3>Reviews</h3>
-      <ul>
-        <% toilet.bookings.each do |booking| %>
-          <li><%= booking.review %>  <%= booking.rating %></li>
-        <% end %>
-      </ul>
+      <div class="message">
+        <%= cl_image_tag toilet.picture, height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+        <div class="message-name">
+          <h3><%= toilet.title %></h3>
+          <p>created as of: <%= toilet.created_at %> </p>
+        </div>
+        <div class="message-body">
+          <p><strong><%= toilet.location %> </strong></p>
+          <p>
+            <%= toilet.description %>
+          </p>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Price</p>
+          <p class="status pending"><%= toilet.price %>nis</p>
+        </div>
+        <div class="message-status">
+          <p class="status pending"><%= link_to "bookings", toilet_bookings_path(toilet) %> </p>
+          <p class="status pending"><%= link_to "update", edit_toilet_path(toilet) %></p>
+          <p class="status pending"><%= link_to "delete", toilet_path(toilet), method: :delete %></p>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

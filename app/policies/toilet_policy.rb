@@ -1,7 +1,7 @@
 class ToiletPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all.where.not(latitude: nil, longitude: nil)
+      scope.where.not(latitude: nil, longitude: nil).all
     end
 
   end
@@ -16,5 +16,14 @@ class ToiletPolicy < ApplicationPolicy
   end
   def dashboard?
     true
+  end
+  def edit?
+    user.owner?
+  end
+  def update?
+    user.owner?
+  end
+  def destroy?
+    user.owner?
   end
 end

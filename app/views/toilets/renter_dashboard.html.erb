@@ -2,19 +2,32 @@
   <div class="container-dashboard">
     <h1>Renter Dashboard</h1>
     <% @bookings.each do |booking| %>
-      <div class="flex-dashboard">
-        <div class="toilet-details">
-          <p><%= booking.toilet.title %></p>
-          <p><%= cl_image_tag booking.toilet.picture, height: 80, width: 80, crop: :fill %></p>
+      <div class="message">
+        <%= cl_image_tag booking.toilet.picture, height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+        <div class="message-name">
+          <h3><%= booking.toilet.title %></h3>
+          <p>created as of: <%= booking.created_at %> </p>
         </div>
-        <div class="renter-reviews">
+        <div class="message-body">
+          <p><strong>Review </strong></p>
           <% if booking.review %>
-            <p>Review</p>
-            <p> <%= booking.review %> , rating:  <%= booking.rating %></p>
+            <p>
+              <%= booking.review%>
+            </p>
           <% else %>
-            <p>Review</p>
-            <%= link_to "Write a review", edit_toilet_booking_path(booking.toilet, booking)%>
+            <p> <%= link_to "Write a review", edit_toilet_booking_path(booking.toilet, booking)%></p>
           <% end %>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Rating</p>
+          <% if booking.review %>
+            <p class="status pending"><%= booking.rating %>/5</p>
+          <% else %>
+            <p><%= link_to "Write a review", edit_toilet_booking_path(booking.toilet, booking)%></p>
+          <% end %>
+        </div>
+        <div class="message-status">
+          <p class="status pending"><%= link_to "update review", edit_toilet_booking_path(booking.toilet, booking)%></p>
         </div>
       </div>
     <% end %>

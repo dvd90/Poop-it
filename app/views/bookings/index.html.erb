@@ -1,0 +1,14 @@
+<h1>Bookings for <%= @toilet.title %></h1>
+<% @bookings.each do |booking| %>
+  <ul>
+    <li>
+      <p><%= booking.toilet.title %></p>
+      <% if booking.review %>
+        <p><%= booking.review %></p>
+        <p><%= booking.rating %></p>
+      <% else %>
+        <p>No review yet</p>
+      <% end %>
+    </li>
+  </ul>
+<% end %>

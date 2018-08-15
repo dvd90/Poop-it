@@ -1,7 +1,23 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = policy_scope(current_user.bookings)
+    @toilet = Toilet.find(params[:toilet_id])
+  end
+
+
   def show
     @booking = Booking.find(params[:id])
     authorize @booking
+    @markers = [
+      {
+        lat: session[:lat],
+        lng: session[:lng],
+      },
+      {
+        lat: @booking.toilet.latitude,
+        lng: @booking.toilet.longitude,
+      }
+    ]
   end
 
   def create

@@ -1,12 +1,23 @@
 class ToiletsController < ApplicationController
-    skip_before_action :authenticate_user!, only: :index
-    before_action :set_toilet, only: [:show, :edit, :update, :destroy]
-  def index         # GET
-    @toilets = policy_scope(Toilet)
-    @markers = @toilets.map do |toilet|
+  skip_before_action :authenticate_user!, only: :index
+  before_action :set_toilet, only: [:show, :edit, :update, :destroy]
+
+  def index
+    session[:lat], session[:lng] = params[:lat], params[:lng]
+    @toilets = policy_scope(Toilet.near([params[:lat], params[:lng]], 0.7) )
+
+    @markers = [
       {
+        lat: params[:lat],
+        lng: params[:lng],
+      }
+    ]
+
+    @toilets.inject(@markers) do |res, toilet|
+      res << {
         lat: toilet.latitude,
-        lng: toilet.longitude
+        lng: toilet.longitude,
+        icon: 'https://image.ibb.co/eSvbBU/toilet.png'
       }
     end
   end
@@ -44,10 +55,14 @@ class ToiletsController < ApplicationController
     end
   end
 
-  def edit          # GET
+  def edit
+    @toilet = Toilet.find(params[:id])
+    authorize @toilet
   end
 
-  def update        # PATCH
+  def update
+    @toilet = Toilet.find(params[:id])
+    authorize @toilet
     if @toilet.update(toilet_params)
       redirect_to dashboard_path
     else
@@ -55,8 +70,11 @@ class ToiletsController < ApplicationController
     end
   end
 
-  def destroy       # DELETE
+  def destroy
+    @toilet = Toilet.find(params[:id])
+    authorize @toilet
     @toilet.destroy
+    redirect_to dashboard_path
   end
 
   private

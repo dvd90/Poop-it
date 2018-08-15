@@ -16,6 +16,7 @@
         <% end %>
     </div>
   </div>
+  <% @markers[0][:icon] = image_path('poop.png') %>
   <div id="map" style="width: 40%; height: 800px; "data-markers="<%= @markers.to_json %>">
   </div>
 </div>
