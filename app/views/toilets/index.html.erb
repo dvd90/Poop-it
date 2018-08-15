@@ -1,23 +1,21 @@
-<div class="banner banner-index" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);">
-  <div class="banner-content">
-    <h1>Poop-It</h1>
-    <p>Poop on the go</p>
-  </div>
-</div>
-<br />
+
 <div class="container-index">
-  <div class="row">
-      <% @toilets.each do |toilet| %>
-      <div class="col-xs-12 col-sm-4">
-        <%= link_to toilet_path(toilet) do %>
-         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
-           url('<%= cl_image_path toilet.picture %>')">
-          <div class="card-description">
-            <p><%=toilet.title %></p>
+  <div class="cards-container">
+    <div class="row">
+        <% @toilets.each do |toilet| %>
+        <div class="col-xs-12 col-sm-4">
+          <%= link_to toilet_path(toilet) do %>
+           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+             url('<%= cl_image_path toilet.picture %>')">
+            <div class="card-description">
+              <p><%=toilet.title %></p>
+            </div>
           </div>
         </div>
-      </div>
-      <% end %>
-      <% end %>
+        <% end %>
+        <% end %>
+    </div>
+  </div>
+  <div id="map" style="width: 40%; height: 800px; "data-markers="<%= @markers.to_json %>">
   </div>
 </div>
