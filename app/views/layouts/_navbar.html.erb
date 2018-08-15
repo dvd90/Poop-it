@@ -7,15 +7,16 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
+
+
     <% if user_signed_in? %>
-
-      <!-- Links when logged in -->
-      <%= link_to "Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
+
+
+      <!-- Links when logged in -->
+             <%= link_to "Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
         <% if current_user.class.to_s.downcase == "renter" %>
             <%= link_to "Toilets", toilets_path, class: "navbar-wagon-item navbar-wagon-link" %>
            <%= link_to destroy_user_session_path, method: :delete do %>
