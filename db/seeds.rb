@@ -1,4 +1,3 @@
-
 User.destroy_all
 Toilet.destroy_all
 Booking.destroy_all
@@ -35,17 +34,17 @@ toilets = [
     price: 15
   },
   {
-    owner: david,
-    title: 'Tiger bun',
-    description: "we have the solution to this pain that you have in the ass",
-    location: 'Shalom Aleichem St 10, Tel Aviv-Yafo',
-    picture: 'https://www.popsci.com/sites/popsci.com/files/styles/1000_1x_/public/images/2016/11/gen-press-cattelan-america_custom-99d77afb5b3134f7f7173a872ee9ecaa5283e997-s900-c85.jpg?itok=l_-tnfse&fc=50,50',
-    price: 10
+    owner: roman,
+    title: 'Le Wagon',
+    description: 'the seat that you never take your ass from. for real.',
+    location: 'HaYarkon 5, Tel Aviv-Yafo',
+    remote_picture_url: 'http://oddstuffmagazine.com/wp-content/uploads/2013/02/funnytoilets7.jpg',
+    price: 35
   },
   {
-    owner: lorene,
+    owner: roman,
     title: 'Comfy seat',
-    description: "the seat that you never take your ass from. for real.",
+    description: 'the seat that you never take your ass from. for real.',
     location: 'HaYarkon 85, Tel Aviv-Yafo',
     remote_picture_url: 'http://oddstuffmagazine.com/wp-content/uploads/2013/02/funnytoilets7.jpg',
     price: 35
@@ -59,7 +58,7 @@ toilets = [
     price: 56
   },
   {
-    owner: david,
+    owner: roman,
     title: 'Hole plug',
     description: 'using our toilet is some much more then any toilet. after doing
                   number one or two with us you will never want use someone else hole plug.',
@@ -68,14 +67,94 @@ toilets = [
     price: 8
   },
   {
-    owner: lorene,
+    owner: roman,
     title: 'lalala',
     description: 'i am tired from cleaning your shit but a like happy people',
     location: 'Ben Yehuda 13, Tel Aviv-Yafo',
     remote_picture_url: 'http://merrilldavid.com/wp-content/uploads/2018/02/toilet-paper-holder-ideas-unusual-toilet-paper-holders-funny-toilet-paper-holders-toilet-paper-holder-for-small-bathroom-toilet-paper-holder-craft-ideas.jpg',
     price: 5
-}]
-
+  },
+    {
+      owner: lorene,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 13, Tel Aviv-Yafo',
+      remote_picture_url: 'https://img.diply.com/article-images/a/0803f04c-4662-4676-9f71-9686049c6095.jpg?imwidth=741',
+      price: 5
+  },
+    {
+      owner: lorene,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 3, Tel Aviv-Yafo',
+      remote_picture_url: 'https://s3.amazonaws.com/askfoxy-media/wp-content/uploads/2017/08/08060120/1-41.jpg',
+      price: 5
+  },
+    {
+      owner: lorene,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 57, Tel Aviv-Yafo',
+      remote_picture_url: 'https://www.sickchirpse.com/wp-content/uploads/2013/11/Most-Dangerous-Toilet-Ever-Featured-.jpg',
+      price: 5
+  },
+    {
+      owner: lorene,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 8, Tel Aviv-Yafo',
+      remote_picture_url: 'https://www.star2.com/wp-content/uploads/2016/11/toilet-bathroom-pixabay-691341aa-770x470.jpg',
+      price: 5
+  },
+    {
+      owner: lorene,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 34, Tel Aviv-Yafo',
+      remote_picture_url: 'http://merrilldavid.com/wp-content/uploads/2018/02/toilet-paper-holder-ideas-unusual-toilet-paper-holders-funny-toilet-paper-holders-toilet-paper-holder-for-small-bathroom-toilet-paper-holder-craft-ideas.jpg',
+      price: 5
+  },
+    {
+      owner: david,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 32, Tel Aviv-Yafo',
+      remote_picture_url: 'https://farm9.staticflickr.com/8582/16705498862_f30a7641c0_b.jpg',
+      price: 5
+  },
+    {
+      owner: david,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 20, Tel Aviv-Yafo',
+      remote_picture_url: 'https://thisdayinwaterhistory.files.wordpress.com/2012/12/1205-van-burens-toilet.jpg?w=625',
+      price: 5
+  },
+    {
+      owner: david,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 25, Tel Aviv-Yafo',
+      remote_picture_url: 'http://merrilldavid.com/wp-content/uploads/2018/02/toilet-paper-holder-ideas-unusual-toilet-paper-holders-funny-toilet-paper-holders-toilet-paper-holder-for-small-bathroom-toilet-paper-holder-craft-ideas.jpg',
+      price: 5
+  },
+    {
+      owner: david,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 139, Tel Aviv-Yafo',
+      remote_picture_url: 'https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/d/6f/d6f8eaa8-2ca2-11e5-997b-676e4a61a609/55a930a6bd606.image.jpg',
+      price: 5
+  },
+    {
+      owner: david,
+      title: 'lalala',
+      description: 'i am tired from cleaning your shit but a like happy people',
+      location: 'Ben Yehuda 4, Tel Aviv-Yafo',
+      remote_picture_url: 'https://bestshopping.center/floors/1-10/Bohemian-glass-toilet-bowl.jpg',
+      price: 5
+  }
+]
 
 Toilet.create!(toilets)
 
