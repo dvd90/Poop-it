@@ -1,0 +1,72 @@
+.toilet-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.toilet-container {
+  width: 60vw;
+}
+
+.grid-description {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  border-shadow: 5px 5px rgba(211,211,211,0.6);
+}
+.toilet-pic {
+  margin-left: 0;
+  width: 350px;
+  height: 250px;
+  border-radius: 5px;
+}
+.toilet-pic p {
+  margin-left: 10px;
+}
+.go-btn {
+  background-color: rgba(173, 52, 62, 0.8);
+  border-radius: 10px;
+}
+.go-btn:hover {
+  background-color: rgba(173, 52, 62, 1);
+}
+.back-btn {
+  background-color: rgba(173, 52, 62, 0.8);
+  border-radius: 10px;
+}
+.back-btn:hover {
+  background-color: rgba(173, 52, 62, 1);
+}
+a.go-btn {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+a.go-btn:hover {
+  text-decoration: none;
+}
+a.back-btn {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+a.back-btn:hover {
+  text-decoration: none;
+}
+.back-search {
+  margin-top: 20px;
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.go-link {
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
