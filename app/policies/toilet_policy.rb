@@ -23,4 +23,7 @@ class ToiletPolicy < ApplicationPolicy
   def update?
     user.owner?
   end
+  def destroy?
+    user.owner?
+  end
 end

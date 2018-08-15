@@ -69,8 +69,11 @@ class ToiletsController < ApplicationController
     end
   end
 
-  def destroy       # DELETE
+  def destroy
+    @toilet = Toilet.find(params[:id])
+    authorize @toilet
     @toilet.destroy
+    redirect_to dashboard_path
   end
 
   private
