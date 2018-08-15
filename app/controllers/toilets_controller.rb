@@ -16,7 +16,8 @@ class ToiletsController < ApplicationController
     @toilets.inject(@markers) do |res, toilet|
       res << {
         lat: toilet.latitude,
-        lng: toilet.longitude
+        lng: toilet.longitude,
+        icon: 'https://image.ibb.co/eSvbBU/toilet.png'
       }
     end
   end
