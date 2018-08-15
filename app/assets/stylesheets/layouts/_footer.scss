@@ -1,44 +1,26 @@
 .footer {
-background: #AD343E;
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 10vh;
-padding: 0px 20px;
-bottom: 0;
+  background: #AD343E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
 }
 .footer-links {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 .footer-links a {
-color: black;
-
-text-decoration: none;
-font-size: 24px;
-padding: 0px 10px;
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
 }
 .footer-links a:hover {
-
+  opacity: 1;
 }
-
-.footer-nav {
-text-align: right;
-color: white;
-opacity: 0.3;
-}
-.fa-dollar-sign{
-margin: 10px;
-}
-
-.fa-poo {
-margin: 10px;
-}
-
-.footer-button-size {
-font-size: 16px;
-}
-
-.text-align {
-margin-bottom: 0;
+.footer .fa-heart {
+  color: rgba(0,0,0,0.3);
 }

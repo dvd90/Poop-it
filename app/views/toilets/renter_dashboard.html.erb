@@ -1,6 +1,6 @@
 <div class="wrapper-dashboard">
   <div class="container-dashboard">
-    <h1>Renter Dashboard</h1>
+    <h1>My bookings</h1>
     <% @bookings.each do |booking| %>
       <div class="message">
         <%= cl_image_tag booking.toilet.picture, height: 50, width: 50, crop: :fill, class: "avatar-large" %>

@@ -41,8 +41,14 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: rgba(173, 52, 62, 1);
   text-decoration: none;
+}
+#navbar-logout {
+  color: rgba(173, 52, 62, 0.8);
+}
+#navbar-logout:hover {
+  color: rgba(173, 52, 62, 1);
 }
 
 /* Dropdown menu */

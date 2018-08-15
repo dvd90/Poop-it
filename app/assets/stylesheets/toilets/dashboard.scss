@@ -5,6 +5,11 @@
 .container-dashboard {
   width: 80vw;
 }
+.container-dashboard h1 {
+  text-transform: uppercase;
+  color: #AD343E;
+  letter-spacing: 3px;
+}
 .flex-dashboard {
   display: flex;
 
