@@ -4,6 +4,10 @@ class BookingsController < ApplicationController
     authorize @booking
     @markers = [
       {
+        lat: session[:lat],
+        lng: session[:lng],
+      },
+      {
         lat: @booking.toilet.latitude,
         lng: @booking.toilet.longitude,
       }

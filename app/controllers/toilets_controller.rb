@@ -3,6 +3,7 @@ class ToiletsController < ApplicationController
   before_action :set_toilet, only: [:show, :edit, :update, :destroy]
 
   def index
+    session[:lat], session[:lng] = params[:lat], params[:lng]
     @toilets = policy_scope(Toilet.near([params[:lat], params[:lng]], 0.7) )
 
     @markers = [

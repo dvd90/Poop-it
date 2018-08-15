@@ -184,10 +184,10 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     map.setZoom(2);
   } else if (markers.length === 1) {
     map.setCenter(markers[0].lat, markers[0].lng);
-    map.setZoom(16);
+    map.setZoom(17);
   } else {
     map.setCenter(markers[0].lat, markers[0].lng);
-    map.setZoom(16);
+    map.setZoom(17);
     // map.fitLatLngBounds(markers);
   }
 
@@ -196,6 +196,14 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     mapTypeId: 'map_style'
   });
   map.setStyle('map_style');
+
+  if (mapElement.dataset.route) {
+    map.drawRoute({
+      origin: [markers[0].lat, markers[0].lng],
+      destination: [markers[1].lat, markers[1].lng],
+      travelMode: 'walking'
+    });
+  }
 }
 
 autocomplete();
