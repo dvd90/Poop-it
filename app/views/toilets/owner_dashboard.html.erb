@@ -15,10 +15,13 @@
           </p>
         </div>
         <div class="message-status">
-          <p class="status pending"><%= toilet.price %> </p>
+          <p class="status pending">Price</p>
+          <p class="status pending"><%= toilet.price %>nis</p>
         </div>
-        <div class="message-links">
-          <p class="status pending"><%= link_to "update", edit_toilet_path(toilet) %> </p>
+        <div class="message-status">
+          <p class="status pending"><%= link_to "bookings", toilet_bookings_path(toilet) %> </p>
+          <p class="status pending"><%= link_to "update", edit_toilet_path(toilet) %></p>
+          <p class="status pending"><%= link_to "delete", toilet_path(toilet), method: :delete %></p>
         </div>
       </div>
     <% end %>

@@ -1,4 +1,10 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = policy_scope(current_user.bookings)
+    @toilet = Toilet.find(params[:toilet_id])
+  end
+
+
   def show
     @booking = Booking.find(params[:id])
     authorize @booking
