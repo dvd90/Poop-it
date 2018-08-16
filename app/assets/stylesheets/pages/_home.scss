@@ -122,3 +122,14 @@ h1 {
   top: 20px;
   right: 20px;
 }
+.home-services {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+}
+.services-container {
+  margin: 20px;
+}
+.service-content {
+  text-align: center;
+}
