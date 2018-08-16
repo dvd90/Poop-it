@@ -1,17 +1,20 @@
 <div class="container-index">
   <div class="cards-container">
+    <p><%= @toilets.size %> toilets found</p>
     <div class="row">
         <% @toilets.each do |toilet| %>
         <div class="col-xs-12 col-sm-4">
           <%= link_to toilet_path(toilet) do %>
-           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+          <div class="card card-index" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
              url('<%= cl_image_path toilet.picture %>')">
-            <div class="card-description">
+            <div class="card-description toilet-index">
               <p><%=toilet.title %></p>
+              <p><%=toilet.price %> nis</p>
             </div>
           </div>
+          <% end %>
         </div>
-        <% end %>
+
         <% end %>
     </div>
   </div>
