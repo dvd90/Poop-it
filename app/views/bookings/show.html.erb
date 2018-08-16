@@ -1,8 +1,8 @@
 <% if policy(Booking).show? %>
-<h1>Booking confirmed!</h1>
+<h1 id="booking-title">Booking confirmed!</h1>
 <div class="container">
   <% @markers[0][:icon] = image_path('poop.png') %>
-  <div id="map" style="width: 100%; height: 800px;" data-markers="<%= @markers.to_json %>" data-route="true">
+  <div id="map" style="width: 100%; height: 500px;" data-markers="<%= @markers.to_json %>" data-route="true" setZoom="20">
 </div>
 <%= @booking.review %>
 <% end %>
