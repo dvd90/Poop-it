@@ -16,7 +16,7 @@
         <%= yield %>
       </div>
 
-    <%= render "layouts/footer" unless @naked %>
+    <%= render "layouts/footer" %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_BROWSER_POOPIT']}" %>
     <%= javascript_pack_tag 'application' %>
