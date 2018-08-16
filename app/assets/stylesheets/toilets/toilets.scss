@@ -30,3 +30,10 @@
   border-radius: 5px;
   box-shadow: 5px 5px 15px gray;
 }
+#map {
+  position: sticky !important;
+  top: 0;
+  width: 40%;
+  height: 100vh;
+}
+
