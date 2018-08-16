@@ -71,33 +71,34 @@ h1 {
   display: block;
   font-size: 5em;
   font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
-  line-height: 1em;
-  color: #1abc9c;
+  line-height: 37px;
+  color: #AD343E;
+  margin-top: 30px;
 }
 .testimonal-wrap img {
   position: absolute;
   top: -30px;
   left: 0;
   right: 0;
-  width: 64px;
-  height: 64px;
+  width: 90px;
+  height: 90px;
   margin: auto;
   border-radius: 50%;
   max-width: 100%;
   box-shadow: 0 0 0 4px #bdc3c7;
 }
 .testimonal-content {
-  font-size: 1.120em;
-  font-weight: 400;
   line-height: 1.5;
   color: #34495e;
   margin-bottom: 1em;
+  font-size: 15px;
 }
+
 .testimonal-author {
-  font-size: 1em;
+  font-size: 15px;
   font-weight: 700;
   font-weight: bolder;
-  color: #1abc9c;
+  color: #AD343E;
   text-transform: uppercase;
 }
 
@@ -107,6 +108,7 @@ h1 {
     width: 33.333%;
     margin-bottom: 0;
     border-right: 1px solid #ddd;
+    margin-top: 50px;
   }
   .testimonal-wrap:last-child {
     border-right: 0;
@@ -122,3 +124,33 @@ h1 {
   top: 20px;
   right: 20px;
 }
+.home-services {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+}
+.services-container {
+  margin: 50px 20px;
+}
+.service-content {
+  text-align: center;
+}
+.service-content h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.home-description {
+  background-color: #AD343E;
+  display: flex;
+  justify-content: space-around;
+}
+.description-container {
+  display: flex;
+  justify-content: space-around;
+}
+.description-content {
+  color: white;
+  padding: 20px 50px;
+
+}
+
