@@ -1,0 +1,22 @@
+.wrapper-booking-details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-booking-details h1 {
+  text-transform: uppercase;
+  color: #AD343E;
+  letter-spacing: 3px;
+}
+
+.container-booking-details {
+  width: 60vw;
+}
+
+.card-bookings_details {
+  background-color: white;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px $light-gray;
+}

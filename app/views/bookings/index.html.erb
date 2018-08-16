@@ -1,14 +1,30 @@
-<h1>Bookings for <%= @toilet.title %></h1>
-<% @bookings.each do |booking| %>
-  <ul>
-    <li>
-      <p><%= booking.toilet.title %></p>
-      <% if booking.review %>
-        <p><%= booking.review %></p>
-        <p><%= booking.rating %></p>
-      <% else %>
-        <p>No review yet</p>
+<div class="wrapper-booking-details">
+
+  <div class="container-booking-details">
+    <h1>Bookings for <%= @toilet.title %></h1>
+    <div class="cards-bookings_details">
+      <div class="row">
+      <% @bookings.each do |booking| %>
+
+        <div class="col-xs-12 col-sm-12 card-bookings_details">
+          <ul style="list-style-type:none">
+          <li>
+            <% if booking.review %>
+            <p><strong>Booked:</strong> <%= booking.created_at %></p>
+            <p><strong>By:</strong>      <%= booking.renter.email %></p>
+            <p><strong>Review:</strong> <%= booking.review %></p>
+            <p><strong>Rating:</strong> <%= booking.rating %>/5</p>
+            <% else %>
+            <p><strong>Booked:</strong> <%= booking.created_at %></p>
+            <p><strong>By:</strong>      <%= booking.renter.email %></p>
+            <p><strong>No review yet</strong></p>
+            <p><strong>No rating yet</strong></p>
+            <% end %>
+          </li>
+        </div>
+      </ul>
       <% end %>
-    </li>
-  </ul>
-<% end %>
+    </div>
+  </div>
+</div>
+</div>
