@@ -68,7 +68,7 @@ toilets = [
   },
   {
     owner: roman,
-    title: 'lalala',
+    title: 'The country home',
     description: 'i am tired from cleaning your shit but a like happy people',
     location: 'Ben Yehuda 13, Tel Aviv-Yafo',
     remote_picture_url: 'http://merrilldavid.com/wp-content/uploads/2018/02/toilet-paper-holder-ideas-unusual-toilet-paper-holders-funny-toilet-paper-holders-toilet-paper-holder-for-small-bathroom-toilet-paper-holder-craft-ideas.jpg',
@@ -76,7 +76,7 @@ toilets = [
   },
     {
       owner: lorene,
-      title: 'lalala',
+      title: 'El Bano',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 13, Tel Aviv-Yafo',
       remote_picture_url: 'https://img.diply.com/article-images/a/0803f04c-4662-4676-9f71-9686049c6095.jpg?imwidth=741',
@@ -84,7 +84,7 @@ toilets = [
   },
     {
       owner: lorene,
-      title: 'lalala',
+      title: 'Oval office',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 3, Tel Aviv-Yafo',
       remote_picture_url: 'https://s3.amazonaws.com/askfoxy-media/wp-content/uploads/2017/08/08060120/1-41.jpg',
@@ -92,7 +92,7 @@ toilets = [
   },
     {
       owner: lorene,
-      title: 'lalala',
+      title: 'The throne',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 57, Tel Aviv-Yafo',
       remote_picture_url: 'https://www.sickchirpse.com/wp-content/uploads/2013/11/Most-Dangerous-Toilet-Ever-Featured-.jpg',
@@ -100,7 +100,7 @@ toilets = [
   },
     {
       owner: lorene,
-      title: 'lalala',
+      title: 'Powder room',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 8, Tel Aviv-Yafo',
       remote_picture_url: 'https://www.star2.com/wp-content/uploads/2016/11/toilet-bathroom-pixabay-691341aa-770x470.jpg',
@@ -108,7 +108,7 @@ toilets = [
   },
     {
       owner: lorene,
-      title: 'lalala',
+      title: 'Jericho',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 34, Tel Aviv-Yafo',
       remote_picture_url: 'http://merrilldavid.com/wp-content/uploads/2018/02/toilet-paper-holder-ideas-unusual-toilet-paper-holders-funny-toilet-paper-holders-toilet-paper-holder-for-small-bathroom-toilet-paper-holder-craft-ideas.jpg',
@@ -116,7 +116,7 @@ toilets = [
   },
     {
       owner: david,
-      title: 'lalala',
+      title: 'Necessarium',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 32, Tel Aviv-Yafo',
       remote_picture_url: 'https://farm9.staticflickr.com/8582/16705498862_f30a7641c0_b.jpg',
@@ -124,7 +124,7 @@ toilets = [
   },
     {
       owner: david,
-      title: 'lalala',
+      title: 'God of poo',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 20, Tel Aviv-Yafo',
       remote_picture_url: 'https://thisdayinwaterhistory.files.wordpress.com/2012/12/1205-van-burens-toilet.jpg?w=625',
@@ -132,7 +132,7 @@ toilets = [
   },
     {
       owner: david,
-      title: 'lalala',
+      title: 'House of ease',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 25, Tel Aviv-Yafo',
       remote_picture_url: 'http://merrilldavid.com/wp-content/uploads/2018/02/toilet-paper-holder-ideas-unusual-toilet-paper-holders-funny-toilet-paper-holders-toilet-paper-holder-for-small-bathroom-toilet-paper-holder-craft-ideas.jpg',
@@ -140,7 +140,7 @@ toilets = [
   },
     {
       owner: david,
-      title: 'lalala',
+      title: 'Aux chiottes royales',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 139, Tel Aviv-Yafo',
       remote_picture_url: 'https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/d/6f/d6f8eaa8-2ca2-11e5-997b-676e4a61a609/55a930a6bd606.image.jpg',
@@ -148,7 +148,7 @@ toilets = [
   },
     {
       owner: david,
-      title: 'lalala',
+      title: 'Los servicios',
       description: 'i am tired from cleaning your shit but a like happy people',
       location: 'Ben Yehuda 4, Tel Aviv-Yafo',
       remote_picture_url: 'https://bestshopping.center/floors/1-10/Bohemian-glass-toilet-bowl.jpg',

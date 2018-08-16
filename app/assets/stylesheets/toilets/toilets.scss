@@ -11,4 +11,22 @@
 }
 .cards-container {
   flex-grow: 1;
+  margin: 10px;
+  padding-top: 10px;
+}
+.toilet-index {
+  color: #AD343E;
+  font-weight: bold;
+}
+.toilet-index p {
+  font-weight: 700;
+  color: white;
+  font-size: 18px;
+  opacity: 1;
+}
+
+.card-index {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px gray;
 }
